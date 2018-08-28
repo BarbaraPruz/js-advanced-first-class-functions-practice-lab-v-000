@@ -18,10 +18,8 @@ function driversByName(drivers) {
 }
 
 function totalRevenue(drivers) {
-  console.log("drivers", drivers);
-  let x = drivers.reduce ( function ( total, driver) {
-    console.log("-- total "+total+' driver'+driver.revenue);
-    total+=driver.revenue;
-  });
-  return x;
+  const sumUpRevenue = function (total, driver) {
+    total += driver.revenue;
+  }[]
+  return drivers.reduce ( sumUpRevenue, 0);
 }
